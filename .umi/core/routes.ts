@@ -17,9 +17,15 @@ export function getRoutes() {
     "component": require('@/pages/index.js').default
   },
   {
-    "path": "/users/:id",
-    "exact": true,
-    "component": require('@/pages/users/[id].js').default
+    "path": "/users",
+    "routes": [
+      {
+        "path": "/users/:id",
+        "exact": true,
+        "component": require('@/pages/users/[id].js').default
+      }
+    ],
+    "component": require('@/pages/users/_layout.js').default
   }
 ];
 
