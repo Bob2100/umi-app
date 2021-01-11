@@ -26,6 +26,10 @@ export function getRoutes() {
         "exact": true
       }
     ]
+  },
+  {
+    "component": require('/Users/bob/develop/kaikeba08/umi-app/pages/notfound').default,
+    "exact": true
   }
 ];
 

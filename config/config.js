@@ -8,6 +8,7 @@ export default {
         { path: '/users/', component: './users/index' },
         { path: '/users/:id', component: './users/[id]' }
       ]
-    }
+    },
+    { component: './notfound' }
   ]
 }
