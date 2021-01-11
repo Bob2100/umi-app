@@ -7,30 +7,25 @@ import { plugin } from './plugin';
 export function getRoutes() {
   const routes = [
   {
-    "path": "/about",
-    "exact": true,
-    "component": require('@/pages/about.js').default
-  },
-  {
     "path": "/",
-    "exact": true,
-    "component": require('@/pages/index.js').default
+    "component": require('/Users/bob/develop/kaikeba08/umi-app/pages/index').default,
+    "exact": true
   },
   {
     "path": "/users",
+    "component": require('/Users/bob/develop/kaikeba08/umi-app/pages/users/_layout').default,
     "routes": [
       {
-        "path": "/users",
-        "exact": true,
-        "component": require('@/pages/users/index.js').default
+        "path": "/users/",
+        "component": require('/Users/bob/develop/kaikeba08/umi-app/pages/users/index').default,
+        "exact": true
       },
       {
         "path": "/users/:id",
-        "exact": true,
-        "component": require('@/pages/users/[id].js').default
+        "component": require('/Users/bob/develop/kaikeba08/umi-app/pages/users/[id]').default,
+        "exact": true
       }
-    ],
-    "component": require('@/pages/users/_layout.js').default
+    ]
   }
 ];
 
