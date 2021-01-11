@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './[id].css';
 
 export default (props) => {

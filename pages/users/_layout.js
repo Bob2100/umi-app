@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './_layout.css';
 
 export default (props) => {
