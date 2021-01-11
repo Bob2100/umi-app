@@ -20,6 +20,11 @@ export function getRoutes() {
     "path": "/users",
     "routes": [
       {
+        "path": "/users",
+        "exact": true,
+        "component": require('@/pages/users/index.js').default
+      },
+      {
         "path": "/users/:id",
         "exact": true,
         "component": require('@/pages/users/[id].js').default
