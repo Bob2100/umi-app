@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styles from './index.css';
 
 export default () => {
@@ -12,7 +13,11 @@ export default () => {
     <div>
       <h1 className={styles.title}>Page users/index</h1>
       <ul>
-        {users.map((user) => (<li key={user.id}>{user.id + ' - ' + user.name}</li>))}
+        {
+          users.map((user) => (<li key={user.id}>
+            <Link to={`/users/${user.name}`}>{user.name}</Link>
+          </li>))
+        }
       </ul>
     </div>
   );
