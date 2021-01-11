@@ -1,4 +1,4 @@
-import { Link } from 'umi';
+import { history } from 'umi';
 import styles from './index.css';
 
 export default () => {
@@ -13,9 +13,7 @@ export default () => {
       <h1 className={styles.title}>Page users/index</h1>
       <ul>
         {
-          users.map((user) => (<li key={user.id}>
-            <Link to={`/users/${user.name}`}>{user.name}</Link>
-          </li>))
+          users.map((user) => (<li key={user.id} onClick={() => history.push(`/users/${user.id}`)}>{user.name}</li>))
         }
       </ul>
     </div>
