@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styles from './goods.css';
 import { connect } from "dva";
-import { Card } from "antd";
+import { Button, Card } from "antd";
 
 @connect(
   state => ({
@@ -9,7 +9,7 @@ import { Card } from "antd";
   }),
   {
     addGood: title => ({
-      type: 'googs/addGood',
+      type: 'goods/addGood',
       payload: { title }
     })
   }
@@ -25,6 +25,9 @@ class Goods extends Component {
               <div>{good.title}</div>
             </Card>
           ))}
+        </div>
+        <div>
+          <Button onClick={() => this.props.addGood('商品' + new Date().getTime())}>添加商品</Button>
         </div>
       </div>
     );

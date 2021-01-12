@@ -6,5 +6,9 @@ export default {
     title: '前端'
   }],
   effects: {},
-  reducers: {}
+  reducers: {
+    addGood(state, action) {
+      return [...state, { title: action.payload.title }]
+    }
+  }
 }
