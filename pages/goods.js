@@ -11,10 +11,16 @@ import { Button, Card } from "antd";
     addGood: title => ({
       type: 'goods/addGood',
       payload: { title }
+    }),
+    getList: () => ({
+      type: 'goods/getList'
     })
   }
 )
 class Goods extends Component {
+  componentDidMount() {
+    this.props.getList();
+  }
   render() {
     return (
       <div>
