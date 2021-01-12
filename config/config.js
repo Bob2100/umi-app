@@ -1,4 +1,5 @@
 export default {
+  dva: {},
   antd: {},
   routes: [
     { path: '/', component: './index' },//路径相对于pages
@@ -17,6 +18,7 @@ export default {
       ]
     },
     { path: '/login', component: './login' },
+    { path: '/goods', component: './goods' },
     { component: './notfound' }
   ]
 }
