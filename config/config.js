@@ -1,4 +1,5 @@
 export default {
+  antd: {},
   routes: [
     { path: '/', component: './index' },//路径相对于pages
     {

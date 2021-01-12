@@ -1,7 +1,15 @@
 {
   "name": "umi-app",
   "version": "0.1.0",
+  "scripts": {
+    "start": "umi dev",
+    "build": "umi build"
+  },
   "devDependencies": {
-    "umi": "^3"
+    "umi": "^3",
+    "@umijs/preset-react": "^1.4.2"
+  },
+  "dependencies": {
+    "antd": "^4.10.2"
   }
 }
