@@ -5,6 +5,7 @@ import { Button, Card } from "antd";
 
 @connect(
   state => ({
+    loading: state.loading,//可以获取加载状态
     goods: state.goods
   }),
   {
@@ -22,6 +23,12 @@ class Goods extends Component {
     this.props.getList();
   }
   render() {
+    console.log(this.props.loading);
+    if (this.props.loading.models.goods) {
+      return (
+        <div>加载中...</div>
+      );
+    }
     return (
       <div>
         <h1 className={styles.title}>Page goods</h1>
